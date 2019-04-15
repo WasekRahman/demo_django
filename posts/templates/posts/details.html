@@ -1,0 +1,19 @@
+{%  extends 'posts/layout.html' %}
+
+{% block content %}
+
+<h4 class="container center-align gray">{{post.pdffile}}</h4>
+<div class="card-content">
+{{ post.pdffile }}
+</div>
+    <div class="card-action">
+    {{ post.created_at }}
+    </div>
+    <div class="container">
+    <embed height="700px" width="500px%" name="plugin" src={{post.pdffile}} type="application/pdf">
+
+</div>
+<a href="/" class="btn">Go back</a>
+<a href="/login">Are you a faculty? Login</a>
+{% endblock %}
+

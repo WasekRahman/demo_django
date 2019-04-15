@@ -1,0 +1,10 @@
+{% extends "posts/layout.html" %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+        <h3><p class="display-4">Welcome back, {{ user.username }}</p></h3>
+            <a href="/admin">Upload/Delete/Update a post?</a>
+	{% else %}
+             <a class="lead" href="{% url 'login' %}">Log in</a>
+	{% endif %}
+{% endblock content %}
